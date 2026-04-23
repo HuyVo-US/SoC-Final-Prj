@@ -1,0 +1,93 @@
+/*
+ * source.c
+ *
+ *  Created on: 23-04-2026
+ *      Author: Admin
+ */
+#include <stdio.h>
+#include "io.h"
+#include "system.h"
+#include "altera_avalon_timer_regs.h"
+#include "sys/alt_irq.h"
+
+volatile unsigned int sec = 0, min = 0, hour = 0;
+volatile unsigned int mode;
+
+void timer_Init(){
+	unsigned int period = 0;
+	// Stop Timer
+	IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_0_BASE,
+	ALTERA_AVALON_TIMER_CONTROL_STOP_MSK);
+	//Configure period
+	period = 50000000 - 1;
+	IOWR_ALTERA_AVALON_TIMER_PERIODL(TIMER_0_BASE, period);
+	IOWR_ALTERA_AVALON_TIMER_PERIODH(TIMER_0_BASE, (period >> 16));
+	IOWR_ALTERA_AVALON_TIMER_CONTROL(TIMER_0_BASE,
+	ALTERA_AVALON_TIMER_CONTROL_CONT_MSK | // Continue counting mode
+	ALTERA_AVALON_TIMER_CONTROL_ITO_MSK | // Interrupt enable
+	ALTERA_AVALON_TIMER_CONTROL_START_MSK);// Start Timer
+}
+
+void Timer_IRQ_Handler(void* isr_context){
+	if (mode == 3) {
+		IOWR(HEXS_0_BASE, 0, ((sec / 10) << 4)  | (sec % 10));
+		IOWR(HEXS_0_BASE, 1, ((min / 10) << 4)  | (min % 10));
+		IOWR(HEXS_0_BASE, 2, ((hour / 10) << 4) | (hour % 10));
+		sec++;
+		if (sec == 60) {
+			sec = 0;
+			min++;
+		}
+		if (min == 60) {
+			min = 0;
+			hour++;
+		}
+		if (hour == 24) {
+			hour = 0;
+		}
+	}
+	// Clear Timer interrupt bit
+	IOWR_ALTERA_AVALON_TIMER_STATUS(TIMER_0_BASE, ALTERA_AVALON_TIMER_STATUS_TO_MSK);
+}
+
+int main() {
+	timer_Init();
+	alt_ic_isr_register(0, TIMER_0_IRQ, Timer_IRQ_Handler, (void*)0, (void*)0);
+    int sw, chuc, dv, data;
+
+    while (1) {
+        sw = IORD(SWITCHES_0_BASE, 0);
+        mode = (sw >> 8) & 0x3;
+        chuc = (sw >> 4) & 0xF;
+        dv   = sw & 0xF;
+        data = (chuc * 10) + dv;
+
+        if (mode != 3) {
+        	if (mode == 0) sec  = (data > 59) ? 59 : data;
+            else if (mode == 1) min  = (data > 59) ? 59 : data;
+            else if (mode == 2) hour = (data > 23) ? 23 : data;
+        }
+        if (mode == 3) {	// RUN
+        	delay_1s();
+        	sec++;
+            if (sec == 60) {
+                sec = 0;
+                min++;
+            }
+            if (min == 60) {
+                min = 0;
+                hour++;
+            }
+            if (hour == 24) {
+                hour = 0;
+            }
+        }
+        IOWR(HEXS_0_BASE, 0, ((sec / 10) << 4)  | (sec % 10));
+        IOWR(HEXS_0_BASE, 1, ((min / 10) << 4)  | (min % 10));
+        IOWR(HEXS_0_BASE, 2, ((hour / 10) << 4) | (hour % 10));
+    }
+}
+
+
+
+
