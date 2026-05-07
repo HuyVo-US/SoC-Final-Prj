@@ -300,15 +300,15 @@ void delay_1s() {
     805c:	defffe04 	addi	sp,sp,-8
     8060:	df000115 	stw	fp,4(sp)
     8064:	df000104 	addi	fp,sp,4
-    for (volatile int i = 0; i < 5000000; i++);
+    for (volatile int i = 0; i < 2000000; i++);
     8068:	e03fff15 	stw	zero,-4(fp)
     806c:	00000306 	br	807c <delay_1s+0x20>
     8070:	e0bfff17 	ldw	r2,-4(fp)
     8074:	10800044 	addi	r2,r2,1
     8078:	e0bfff15 	stw	r2,-4(fp)
     807c:	e0ffff17 	ldw	r3,-4(fp)
-    8080:	00801334 	movhi	r2,76
-    8084:	1092cfc4 	addi	r2,r2,19263
+    8080:	008007f4 	movhi	r2,31
+    8084:	10a11fc4 	addi	r2,r2,-31617
     8088:	10fff90e 	bge	r2,r3,8070 <_gp+0xffff6734>
 }
     808c:	0001883a 	nop
@@ -2331,7 +2331,7 @@ int alt_get_fd (alt_dev* dev)
     93a0:	00bfffc4 	movi	r2,-1
     93a4:	00003106 	br	946c <__register_exitproc+0x134>
     93a8:	01002304 	movi	r4,140
-    93ac:	00000000 	call	0 <__alt_mem_onchip_memory2_0-0x8000>
+    93ac:	00000000 	call	0 <__reset-0x8000>
     93b0:	1021883a 	mov	r16,r2
     93b4:	103ffa26 	beq	r2,zero,93a0 <_gp+0xffff7a64>
     93b8:	10000115 	stw	zero,4(r2)
@@ -2349,7 +2349,7 @@ int alt_get_fd (alt_dev* dev)
     93e8:	10800004 	addi	r2,r2,0
     93ec:	103fec26 	beq	r2,zero,93a0 <_gp+0xffff7a64>
     93f0:	01004204 	movi	r4,264
-    93f4:	00000000 	call	0 <__alt_mem_onchip_memory2_0-0x8000>
+    93f4:	00000000 	call	0 <__reset-0x8000>
     93f8:	103fe926 	beq	r2,zero,93a0 <_gp+0xffff7a64>
     93fc:	10004015 	stw	zero,256(r2)
     9400:	10004115 	stw	zero,260(r2)
@@ -2470,9 +2470,9 @@ int alt_get_fd (alt_dev* dev)
     95c4:	89000015 	stw	r4,0(r17)
     95c8:	a8000226 	beq	r21,zero,95d4 <__call_exitprocs+0x144>
     95cc:	a809883a 	mov	r4,r21
-    95d0:	00000000 	call	0 <__alt_mem_onchip_memory2_0-0x8000>
+    95d0:	00000000 	call	0 <__reset-0x8000>
     95d4:	9809883a 	mov	r4,r19
-    95d8:	00000000 	call	0 <__alt_mem_onchip_memory2_0-0x8000>
+    95d8:	00000000 	call	0 <__reset-0x8000>
     95dc:	8cc00017 	ldw	r19,0(r17)
     95e0:	003fbd06 	br	94d8 <_gp+0xffff7b9c>
     95e4:	9823883a 	mov	r17,r19

@@ -301,15 +301,15 @@ void delay_1s() {
     805c:	defffe04 	addi	sp,sp,-8
     8060:	df000115 	stw	fp,4(sp)
     8064:	df000104 	addi	fp,sp,4
-    for (volatile int i = 0; i < 5000000; i++);
+    for (volatile int i = 0; i < 2500000; i++);
     8068:	e03fff15 	stw	zero,-4(fp)
     806c:	00000306 	br	807c <delay_1s+0x20>
     8070:	e0bfff17 	ldw	r2,-4(fp)
     8074:	10800044 	addi	r2,r2,1
     8078:	e0bfff15 	stw	r2,-4(fp)
     807c:	e0ffff17 	ldw	r3,-4(fp)
-    8080:	00801334 	movhi	r2,76
-    8084:	1092cfc4 	addi	r2,r2,19263
+    8080:	008009b4 	movhi	r2,38
+    8084:	108967c4 	addi	r2,r2,9631
     8088:	10fff90e 	bge	r2,r3,8070 <_gp+0xffff6690>
 }
     808c:	0001883a 	nop

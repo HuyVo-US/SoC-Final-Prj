@@ -1,18 +1,9 @@
-22:30:52 **** Incremental Build of configuration Nios II for project Prj1 ****
+16:02:31 **** Incremental Build of configuration Nios II for project Prj1 ****
 make all 
 Info: Building ../Prj1_bsp/
 D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Prj1_bsp/
 [BSP build complete]
-Info: Compiling source.c to obj/default/source.o
-nios2-elf-gcc -xc -MP -MMD -c -I../Prj1_bsp//HAL/inc -I../Prj1_bsp/ -I../Prj1_bsp//drivers/inc  -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_USE_SMALL_DRIVERS -DSMALL_C_LIB -DALT_SINGLE_THREADED    -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o obj/default/source.o source.c
-Info: Linking Prj1.elf
-nios2-elf-g++  -T'../Prj1_bsp//linker.x' -msys-crt0='../Prj1_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Prj1_bsp/  -msmallc  -Wl,-Map=Prj1.map   -O0 -g -Wall   -mno-hw-div -mno-hw-mul -mno-hw-mulx -mgpopt=global  -o Prj1.elf obj/default/source.o -lm -msys-lib=m
-nios2-elf-insert Prj1.elf --thread_model hal --cpu_name nios2_gen2_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name system --quartus_project_dir "D:/Quartus/SoC-Prj1" --jdi ../..//output_files/Prj1.jdi --sopcinfo D:/Quartus/SoC-Prj1/Software/Prj1_bsp/../../system.sopcinfo
-Info: (Prj1.elf) 6672 Bytes program size (code + initialized data).
-Info:            24 KBytes free for stack + heap.
-Info: Creating Prj1.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source Prj1.elf >Prj1.objdump
 [Prj1 build complete]
 
-22:30:57 Build Finished (took 4s.354ms)
+16:02:32 Build Finished (took 926ms)
 

@@ -9,7 +9,7 @@
 #include "system.h"
 
 void delay_1s() {
-    for (volatile int i = 0; i < 5000000; i++);
+    for (volatile int i = 0; i < 2000000; i++);
 }
 
 unsigned char seg7[10] = {
