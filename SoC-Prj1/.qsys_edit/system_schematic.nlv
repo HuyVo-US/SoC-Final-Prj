@@ -16,17 +16,17 @@ preplace inst system.hex1 -pg 1 -lvl 3 -y 30
 preplace inst system -pg 1 -lvl 1 -y 40 -regy -20
 preplace inst system.hex2 -pg 1 -lvl 3 -y 510
 preplace netloc EXPORT<net_container>system</net_container>(SLAVE)system.switch_external_connection,(SLAVE)switch.external_connection) 1 0 3 NJ 340 NJ 340 NJ
-preplace netloc INTERCONNECT<net_container>system</net_container>(SLAVE)hex1.reset,(MASTER)clock.clk_reset,(SLAVE)hex5.reset,(SLAVE)nios2_gen2_0.reset,(SLAVE)switch.reset,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)hex2.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)jtag_uart_0.reset,(SLAVE)hex4.reset,(SLAVE)hex3.reset,(SLAVE)hex0.reset) 1 1 2 380 100 820
 preplace netloc EXPORT<net_container>system</net_container>(SLAVE)system.hex1_external_connection,(SLAVE)hex1.external_connection) 1 0 3 NJ 280 NJ 280 NJ
-preplace netloc INTERCONNECT<net_container>system</net_container>(SLAVE)hex2.s1,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)hex3.s1,(MASTER)nios2_gen2_0.instruction_master,(MASTER)nios2_gen2_0.data_master,(SLAVE)jtag_uart_0.avalon_jtag_slave,(SLAVE)hex0.s1,(SLAVE)switch.s1,(SLAVE)hex5.s1,(SLAVE)onchip_memory2_0.s1,(SLAVE)hex1.s1,(SLAVE)hex4.s1) 1 1 2 400 860 840
+preplace netloc FAN_OUT<net_container>system</net_container>(SLAVE)onchip_memory2_0.clk1,(SLAVE)hex1.clk,(SLAVE)hex4.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)hex0.clk,(SLAVE)switch.clk,(MASTER)clock.clk,(SLAVE)hex5.clk,(SLAVE)hex2.clk,(SLAVE)hex3.clk,(SLAVE)nios2_gen2_0.clk) 1 1 2 400 100 800
 preplace netloc EXPORT<net_container>system</net_container>(SLAVE)system.hex5_external_connection,(SLAVE)hex5.external_connection) 1 0 3 NJ 740 NJ 740 NJ
 preplace netloc EXPORT<net_container>system</net_container>(SLAVE)system.hex4_external_connection,(SLAVE)hex4.external_connection) 1 0 3 NJ 640 NJ 640 NJ
 preplace netloc EXPORT<net_container>system</net_container>(SLAVE)system.clk,(SLAVE)clock.clk_in) 1 0 1 NJ
-preplace netloc EXPORT<net_container>system</net_container>(SLAVE)system.reset,(SLAVE)clock.clk_in_reset) 1 0 1 NJ
-preplace netloc FAN_OUT<net_container>system</net_container>(SLAVE)hex3.clk,(SLAVE)hex4.clk,(SLAVE)switch.clk,(MASTER)clock.clk,(SLAVE)jtag_uart_0.clk,(SLAVE)hex2.clk,(SLAVE)hex5.clk,(SLAVE)nios2_gen2_0.clk,(SLAVE)onchip_memory2_0.clk1,(SLAVE)hex1.clk,(SLAVE)hex0.clk) 1 1 2 400 80 800
-preplace netloc EXPORT<net_container>system</net_container>(SLAVE)system.hex2_external_connection,(SLAVE)hex2.external_connection) 1 0 3 NJ 540 NJ 540 NJ
+preplace netloc INTERCONNECT<net_container>system</net_container>(SLAVE)hex5.s1,(SLAVE)hex1.s1,(SLAVE)hex4.s1,(SLAVE)onchip_memory2_0.s1,(SLAVE)switch.s1,(MASTER)nios2_gen2_0.instruction_master,(SLAVE)nios2_gen2_0.debug_mem_slave,(SLAVE)hex2.s1,(SLAVE)hex3.s1,(SLAVE)hex0.s1,(MASTER)nios2_gen2_0.data_master,(SLAVE)jtag_uart_0.avalon_jtag_slave) 1 1 2 400 880 820
+preplace netloc EXPORT<net_container>system</net_container>(SLAVE)system.hex3_external_connection,(SLAVE)hex3.external_connection) 1 0 3 NJ 840 NJ 840 NJ
+preplace netloc EXPORT<net_container>system</net_container>(SLAVE)clock.clk_in_reset,(SLAVE)system.reset) 1 0 1 NJ
+preplace netloc INTERCONNECT<net_container>system</net_container>(SLAVE)jtag_uart_0.reset,(SLAVE)onchip_memory2_0.reset1,(SLAVE)hex4.reset,(SLAVE)hex3.reset,(SLAVE)switch.reset,(MASTER)nios2_gen2_0.debug_reset_request,(SLAVE)hex2.reset,(MASTER)clock.clk_reset,(SLAVE)nios2_gen2_0.reset,(SLAVE)hex1.reset,(SLAVE)hex0.reset,(SLAVE)hex5.reset) 1 1 2 380 860 840
+preplace netloc EXPORT<net_container>system</net_container>(SLAVE)hex2.external_connection,(SLAVE)system.hex2_external_connection) 1 0 3 NJ 540 NJ 540 NJ
 preplace netloc EXPORT<net_container>system</net_container>(SLAVE)hex0.external_connection,(SLAVE)system.hex0_external_connection) 1 0 3 NJ 440 NJ 440 NJ
 preplace netloc POINT_TO_POINT<net_container>system</net_container>(MASTER)nios2_gen2_0.irq,(SLAVE)jtag_uart_0.irq) 1 2 1 860
-preplace netloc EXPORT<net_container>system</net_container>(SLAVE)hex3.external_connection,(SLAVE)system.hex3_external_connection) 1 0 3 NJ 840 NJ 840 NJ
 levelinfo -pg 1 0 170 1070
 levelinfo -hier system 180 210 540 910 1060

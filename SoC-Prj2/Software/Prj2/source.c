@@ -1,15 +1,14 @@
 /*
+ *
  * source.c
  *
- *  Created on: 23-04-2026
- *      Author: Admin
  */
 #include <stdio.h>
 #include "io.h"
 #include "system.h"
 
 void delay_1s() {
-    for (volatile int i = 0; i < 2000000; i++);
+    for (volatile int i = 0; i < 500000; i++);
 }
 
 int main() {
@@ -24,7 +23,7 @@ int main() {
         dv   = sw & 0xF;
         data = (chuc * 10) + dv;
 
-        if (mode != 3) {
+        if (mode != 3) {	// SETUP
         	if (mode == 0) sec  = (data > 59) ? 59 : data;
             else if (mode == 1) min  = (data > 59) ? 59 : data;
             else if (mode == 2) hour = (data > 23) ? 23 : data;
@@ -49,10 +48,6 @@ int main() {
         IOWR(HEXS_0_BASE, 2, ((hour / 10) << 4) | (hour % 10));
     }
 }
-
-
-
-
 
 
 

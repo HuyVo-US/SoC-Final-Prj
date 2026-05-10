@@ -2,7 +2,7 @@ set_global_assignment -entity "system" -library "system" -name IP_TOOL_NAME "Qsy
 set_global_assignment -entity "system" -library "system" -name IP_TOOL_VERSION "18.1"
 set_global_assignment -entity "system" -library "system" -name IP_TOOL_ENV "Qsys"
 set_global_assignment -library "system" -name SOPCINFO_FILE [file join $::quartus(qip_path) "../../system.sopcinfo"]
-set_global_assignment -entity "system" -library "system" -name SLD_INFO "QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1776957182"
+set_global_assignment -entity "system" -library "system" -name SLD_INFO "QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1778316580"
 set_global_assignment -library "system" -name MISC_FILE [file join $::quartus(qip_path) "../system.cmp"]
 set_global_assignment -library "system" -name SLD_FILE [file join $::quartus(qip_path) "system.regmap"]
 set_global_assignment -library "system" -name SLD_FILE [file join $::quartus(qip_path) "system.debuginfo"]
@@ -16,7 +16,7 @@ set_global_assignment -entity "system" -library "system" -name IP_COMPONENT_DISP
 set_global_assignment -entity "system" -library "system" -name IP_COMPONENT_REPORT_HIERARCHY "On"
 set_global_assignment -entity "system" -library "system" -name IP_COMPONENT_INTERNAL "Off"
 set_global_assignment -entity "system" -library "system" -name IP_COMPONENT_VERSION "MS4w"
-set_global_assignment -entity "system" -library "system" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTc3Njk1NzE4Mg==::QXV0byBHRU5FUkFUSU9OX0lE"
+set_global_assignment -entity "system" -library "system" -name IP_COMPONENT_PARAMETER "QVVUT19HRU5FUkFUSU9OX0lE::MTc3ODMxNjU4MA==::QXV0byBHRU5FUkFUSU9OX0lE"
 set_global_assignment -entity "system" -library "system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfRkFNSUxZ::Q3ljbG9uZSBW::QXV0byBERVZJQ0VfRkFNSUxZ"
 set_global_assignment -entity "system" -library "system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0U=::NUNTWEZDNkQ2RjMxQzY=::QXV0byBERVZJQ0U="
 set_global_assignment -entity "system" -library "system" -name IP_COMPONENT_PARAMETER "QVVUT19ERVZJQ0VfU1BFRURHUkFERQ==::Nl9INg==::QXV0byBERVZJQ0VfU1BFRURHUkFERQ=="
@@ -33,7 +33,7 @@ set_global_assignment -entity "altera_reset_controller" -library "system" -name 
 set_global_assignment -entity "altera_reset_controller" -library "system" -name IP_COMPONENT_PARAMETER "TlVNX1JFU0VUX0lOUFVUUw==::MQ==::TnVtYmVyIG9mIGlucHV0cw=="
 set_global_assignment -entity "altera_reset_controller" -library "system" -name IP_COMPONENT_PARAMETER "T1VUUFVUX1JFU0VUX1NZTkNfRURHRVM=::ZGVhc3NlcnQ=::T3V0cHV0IFJlc2V0IFN5bmNocm9ub3VzIEVkZ2Vz"
 set_global_assignment -entity "altera_reset_controller" -library "system" -name IP_COMPONENT_PARAMETER "U1lOQ19ERVBUSA==::Mg==::U3luY2hyb25pemVyIGRlcHRo"
-set_global_assignment -entity "altera_reset_controller" -library "system" -name IP_COMPONENT_PARAMETER "UkVTRVRfUkVRVUVTVF9QUkVTRU5U::MA==::UmVzZXQgcmVxdWVzdCBsb2dpYyBlbmFibGU="
+set_global_assignment -entity "altera_reset_controller" -library "system" -name IP_COMPONENT_PARAMETER "UkVTRVRfUkVRVUVTVF9QUkVTRU5U::MQ==::UmVzZXQgcmVxdWVzdCBsb2dpYyBlbmFibGU="
 set_global_assignment -entity "altera_reset_controller" -library "system" -name IP_COMPONENT_PARAMETER "UkVTRVRfUkVRX1dBSVRfVElNRQ==::MQ==::UmVzZXQgcmVxdWVzdCB3YWl0IHRpbWU="
 set_global_assignment -entity "altera_reset_controller" -library "system" -name IP_COMPONENT_PARAMETER "TUlOX1JTVF9BU1NFUlRJT05fVElNRQ==::Mw==::TWluaW11bSByZXNldCBhc3NlcnRpb24gdGltZQ=="
 set_global_assignment -entity "altera_reset_controller" -library "system" -name IP_COMPONENT_PARAMETER "UkVTRVRfUkVRX0VBUkxZX0RTUlRfVElNRQ==::MQ==::UmVzZXQgcmVxdWVzdCBkZWFzc2VydCB0aW1pbmc="

@@ -39,39 +39,39 @@ Idx Name          Size      VMA       LMA       File off  Algn
                   CONTENTS, READONLY, DEBUGGING
  10 .debug_abbrev 00001b18  00000000  00000000  000078fa  2**0
                   CONTENTS, READONLY, DEBUGGING
- 11 .debug_line   00001de3  00000000  00000000  00009412  2**0
+ 11 .debug_line   00001de1  00000000  00000000  00009412  2**0
                   CONTENTS, READONLY, DEBUGGING
- 12 .debug_frame  000007c0  00000000  00000000  0000b1f8  2**2
+ 12 .debug_frame  000007c0  00000000  00000000  0000b1f4  2**2
                   CONTENTS, READONLY, DEBUGGING
- 13 .debug_str    0000124e  00000000  00000000  0000b9b8  2**0
+ 13 .debug_str    0000124e  00000000  00000000  0000b9b4  2**0
                   CONTENTS, READONLY, DEBUGGING
- 14 .debug_loc    00000974  00000000  00000000  0000cc06  2**0
+ 14 .debug_loc    00000974  00000000  00000000  0000cc02  2**0
                   CONTENTS, READONLY, DEBUGGING
- 15 .debug_alt_sim_info 00000010  00000000  00000000  0000d57c  2**2
+ 15 .debug_alt_sim_info 00000010  00000000  00000000  0000d578  2**2
                   CONTENTS, READONLY, DEBUGGING
- 16 .debug_ranges 00000110  00000000  00000000  0000d590  2**3
+ 16 .debug_ranges 00000110  00000000  00000000  0000d588  2**3
                   CONTENTS, READONLY, DEBUGGING
- 17 .thread_model 00000003  00000000  00000000  0000ebc6  2**0
+ 17 .thread_model 00000003  00000000  00000000  0000ebbe  2**0
                   CONTENTS, READONLY
- 18 .cpu          0000000c  00000000  00000000  0000ebc9  2**0
+ 18 .cpu          0000000c  00000000  00000000  0000ebc1  2**0
                   CONTENTS, READONLY
- 19 .qsys         00000001  00000000  00000000  0000ebd5  2**0
+ 19 .qsys         00000001  00000000  00000000  0000ebcd  2**0
                   CONTENTS, READONLY
- 20 .simulation_enabled 00000001  00000000  00000000  0000ebd6  2**0
+ 20 .simulation_enabled 00000001  00000000  00000000  0000ebce  2**0
                   CONTENTS, READONLY
- 21 .stderr_dev   0000000b  00000000  00000000  0000ebd7  2**0
+ 21 .stderr_dev   0000000b  00000000  00000000  0000ebcf  2**0
                   CONTENTS, READONLY
- 22 .stdin_dev    0000000b  00000000  00000000  0000ebe2  2**0
+ 22 .stdin_dev    0000000b  00000000  00000000  0000ebda  2**0
                   CONTENTS, READONLY
- 23 .stdout_dev   0000000b  00000000  00000000  0000ebed  2**0
+ 23 .stdout_dev   0000000b  00000000  00000000  0000ebe5  2**0
                   CONTENTS, READONLY
- 24 .sopc_system_name 00000006  00000000  00000000  0000ebf8  2**0
+ 24 .sopc_system_name 00000006  00000000  00000000  0000ebf0  2**0
                   CONTENTS, READONLY
- 25 .quartus_project_dir 00000013  00000000  00000000  0000ebfe  2**0
+ 25 .quartus_project_dir 00000013  00000000  00000000  0000ebf6  2**0
                   CONTENTS, READONLY
- 26 .jdi          0000505f  00000000  00000000  0000ec11  2**0
+ 26 .jdi          0000505f  00000000  00000000  0000ec09  2**0
                   CONTENTS, READONLY
- 27 .sopcinfo     00056987  00000000  00000000  00013c70  2**0
+ 27 .sopcinfo     0005664b  00000000  00000000  00013c68  2**0
                   CONTENTS, READONLY
 SYMBOL TABLE:
 00008000 l    d  .entry	00000000 .entry
@@ -301,15 +301,15 @@ void delay_1s() {
     805c:	defffe04 	addi	sp,sp,-8
     8060:	df000115 	stw	fp,4(sp)
     8064:	df000104 	addi	fp,sp,4
-    for (volatile int i = 0; i < 2500000; i++);
+    for (volatile int i = 0; i < 500000; i++);
     8068:	e03fff15 	stw	zero,-4(fp)
     806c:	00000306 	br	807c <delay_1s+0x20>
     8070:	e0bfff17 	ldw	r2,-4(fp)
     8074:	10800044 	addi	r2,r2,1
     8078:	e0bfff15 	stw	r2,-4(fp)
     807c:	e0ffff17 	ldw	r3,-4(fp)
-    8080:	008009b4 	movhi	r2,38
-    8084:	108967c4 	addi	r2,r2,9631
+    8080:	00800234 	movhi	r2,8
+    8084:	10a847c4 	addi	r2,r2,-24289
     8088:	10fff90e 	bge	r2,r3,8070 <_gp+0xffff6690>
 }
     808c:	0001883a 	nop
@@ -365,7 +365,7 @@ int main() {
     810c:	1885883a 	add	r2,r3,r2
     8110:	e0bfff15 	stw	r2,-4(fp)
 
-        if (mode != 3) {
+        if (mode != 3) {	// SETUP
     8114:	e0bffc17 	ldw	r2,-16(fp)
     8118:	108000e0 	cmpeqi	r2,r2,3
     811c:	1000191e 	bne	r2,zero,8184 <main+0xe4>
@@ -2377,7 +2377,7 @@ int alt_get_fd (alt_dev* dev)
     9438:	00bfffc4 	movi	r2,-1
     943c:	00003106 	br	9504 <__register_exitproc+0x134>
     9440:	01002304 	movi	r4,140
-    9444:	00000000 	call	0 <__alt_mem_onchip_memory2_0-0x8000>
+    9444:	00000000 	call	0 <__reset-0x8000>
     9448:	1021883a 	mov	r16,r2
     944c:	103ffa26 	beq	r2,zero,9438 <_gp+0xffff7a58>
     9450:	10000115 	stw	zero,4(r2)
@@ -2395,7 +2395,7 @@ int alt_get_fd (alt_dev* dev)
     9480:	10800004 	addi	r2,r2,0
     9484:	103fec26 	beq	r2,zero,9438 <_gp+0xffff7a58>
     9488:	01004204 	movi	r4,264
-    948c:	00000000 	call	0 <__alt_mem_onchip_memory2_0-0x8000>
+    948c:	00000000 	call	0 <__reset-0x8000>
     9490:	103fe926 	beq	r2,zero,9438 <_gp+0xffff7a58>
     9494:	10004015 	stw	zero,256(r2)
     9498:	10004115 	stw	zero,260(r2)
@@ -2516,9 +2516,9 @@ int alt_get_fd (alt_dev* dev)
     965c:	89000015 	stw	r4,0(r17)
     9660:	a8000226 	beq	r21,zero,966c <__call_exitprocs+0x144>
     9664:	a809883a 	mov	r4,r21
-    9668:	00000000 	call	0 <__alt_mem_onchip_memory2_0-0x8000>
+    9668:	00000000 	call	0 <__reset-0x8000>
     966c:	9809883a 	mov	r4,r19
-    9670:	00000000 	call	0 <__alt_mem_onchip_memory2_0-0x8000>
+    9670:	00000000 	call	0 <__reset-0x8000>
     9674:	8cc00017 	ldw	r19,0(r17)
     9678:	003fbd06 	br	9570 <_gp+0xffff7b90>
     967c:	9823883a 	mov	r17,r19

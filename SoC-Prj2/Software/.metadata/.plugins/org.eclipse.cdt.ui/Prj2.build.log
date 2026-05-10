@@ -1,9 +1,9 @@
-16:06:37 **** Incremental Build of configuration Nios II for project Prj2 ****
+14:50:58 **** Incremental Build of configuration Nios II for project Prj2 ****
 make all 
 Info: Building ../Prj2_bsp/
 D:/intelFPGA_lite/18.1/nios2eds/bin/gnu/H-x86_64-mingw32/bin/make --no-print-directory -C ../Prj2_bsp/
 [BSP build complete]
 [Prj2 build complete]
 
-16:06:38 Build Finished (took 886ms)
+14:50:59 Build Finished (took 717ms)
 

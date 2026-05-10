@@ -213,7 +213,7 @@ module system_mm_interconnect_0_router
 
     // ( 0x11000 .. 0x11010 )
     if ( {address[RG:PAD2],{PAD2{1'b0}}} == 17'h11000  && write_transaction  ) begin
-            src_channel = 5'b00100;
+            src_channel = 5'b00010;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 0;
     end
 
@@ -225,7 +225,7 @@ module system_mm_interconnect_0_router
 
     // ( 0x11020 .. 0x11024 )
     if ( {address[RG:PAD4],{PAD4{1'b0}}} == 17'h11020  && read_transaction  ) begin
-            src_channel = 5'b00010;
+            src_channel = 5'b00100;
             src_data[PKT_DEST_ID_H:PKT_DEST_ID_L] = 1;
     end
 

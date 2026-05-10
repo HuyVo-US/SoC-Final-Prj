@@ -34,13 +34,13 @@ module system (
 	wire         mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_read;        // mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_read -> jtag_uart_0:av_read_n
 	wire         mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_write;       // mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_write -> jtag_uart_0:av_write_n
 	wire  [31:0] mm_interconnect_0_jtag_uart_0_avalon_jtag_slave_writedata;   // mm_interconnect_0:jtag_uart_0_avalon_jtag_slave_writedata -> jtag_uart_0:av_writedata
-	wire         mm_interconnect_0_switches_0_avalon_slave_0_chipselect;      // mm_interconnect_0:Switches_0_avalon_slave_0_chipselect -> Switches_0:iChip_select_n
-	wire  [31:0] mm_interconnect_0_switches_0_avalon_slave_0_readdata;        // Switches_0:oSwitches_reg -> mm_interconnect_0:Switches_0_avalon_slave_0_readdata
-	wire         mm_interconnect_0_switches_0_avalon_slave_0_read;            // mm_interconnect_0:Switches_0_avalon_slave_0_read -> Switches_0:iRead_n
 	wire         mm_interconnect_0_hexs_0_avalon_slave_0_chipselect;          // mm_interconnect_0:Hexs_0_avalon_slave_0_chipselect -> Hexs_0:iChipSelect_n
 	wire   [1:0] mm_interconnect_0_hexs_0_avalon_slave_0_address;             // mm_interconnect_0:Hexs_0_avalon_slave_0_address -> Hexs_0:iAddress
 	wire         mm_interconnect_0_hexs_0_avalon_slave_0_write;               // mm_interconnect_0:Hexs_0_avalon_slave_0_write -> Hexs_0:iWrite_n
 	wire  [31:0] mm_interconnect_0_hexs_0_avalon_slave_0_writedata;           // mm_interconnect_0:Hexs_0_avalon_slave_0_writedata -> Hexs_0:iData
+	wire         mm_interconnect_0_switches_0_avalon_slave_0_chipselect;      // mm_interconnect_0:Switches_0_avalon_slave_0_chipselect -> Switches_0:iChip_select_n
+	wire  [31:0] mm_interconnect_0_switches_0_avalon_slave_0_readdata;        // Switches_0:oSwitches_reg -> mm_interconnect_0:Switches_0_avalon_slave_0_readdata
+	wire         mm_interconnect_0_switches_0_avalon_slave_0_read;            // mm_interconnect_0:Switches_0_avalon_slave_0_read -> Switches_0:iRead_n
 	wire  [31:0] mm_interconnect_0_nios2_gen2_0_debug_mem_slave_readdata;     // nios2_gen2_0:debug_mem_slave_readdata -> mm_interconnect_0:nios2_gen2_0_debug_mem_slave_readdata
 	wire         mm_interconnect_0_nios2_gen2_0_debug_mem_slave_waitrequest;  // nios2_gen2_0:debug_mem_slave_waitrequest -> mm_interconnect_0:nios2_gen2_0_debug_mem_slave_waitrequest
 	wire         mm_interconnect_0_nios2_gen2_0_debug_mem_slave_debugaccess;  // mm_interconnect_0:nios2_gen2_0_debug_mem_slave_debugaccess -> nios2_gen2_0:debug_mem_slave_debugaccess
@@ -143,7 +143,7 @@ module system (
 	);
 
 	system_mm_interconnect_0 mm_interconnect_0 (
-		.clock_clk_clk                                  (clk_clk),                                                     //                                clock_clk.clk
+		.clk_0_clk_clk                                  (clk_clk),                                                     //                                clk_0_clk.clk
 		.nios2_gen2_0_reset_reset_bridge_in_reset_reset (rst_controller_reset_out_reset),                              // nios2_gen2_0_reset_reset_bridge_in_reset.reset
 		.nios2_gen2_0_data_master_address               (nios2_gen2_0_data_master_address),                            //                 nios2_gen2_0_data_master.address
 		.nios2_gen2_0_data_master_waitrequest           (nios2_gen2_0_data_master_waitrequest),                        //                                         .waitrequest

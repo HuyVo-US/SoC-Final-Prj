@@ -1,5 +1,5 @@
 Flow report for Prj2
-Thu Apr 23 22:49:25 2026
+Sun May 10 14:49:13 2026
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,15 +40,15 @@ refer to the applicable agreement for further details.
 +-------------------------------------------------------------------------------+
 ; Flow Summary                                                                  ;
 +---------------------------------+---------------------------------------------+
-; Flow Status                     ; Successful - Thu Apr 23 22:49:15 2026       ;
+; Flow Status                     ; Successful - Sun May 10 14:49:03 2026       ;
 ; Quartus Prime Version           ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                   ; Prj2                                        ;
 ; Top-level Entity Name           ; Prj2                                        ;
 ; Family                          ; Cyclone V                                   ;
 ; Device                          ; 5CSXFC6D6F31C6                              ;
 ; Timing Models                   ; Final                                       ;
-; Logic utilization (in ALMs)     ; 757 / 41,910 ( 2 % )                        ;
-; Total registers                 ; 988                                         ;
+; Logic utilization (in ALMs)     ; 751 / 41,910 ( 2 % )                        ;
+; Total registers                 ; 981                                         ;
 ; Total pins                      ; 54 / 499 ( 11 % )                           ;
 ; Total virtual pins              ; 0                                           ;
 ; Total block memory bits         ; 273,408 / 5,662,720 ( 5 % )                 ;
@@ -67,7 +67,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/23/2026 22:47:36 ;
+; Start date & time ; 05/10/2026 14:47:25 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Prj2                ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------------------------+---------------+----------------------+------------+
 ; Assignment Name                     ; Value                                                    ; Default Value ; Entity Name          ; Section Id ;
 +-------------------------------------+----------------------------------------------------------+---------------+----------------------+------------+
-; COMPILER_SIGNATURE_ID               ; 10995770589188.177695925606072                           ; --            ; --                   ; --         ;
+; COMPILER_SIGNATURE_ID               ; 10995770589188.177839924502664                           ; --            ; --                   ; --         ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                       ; --            ; --                   ; --         ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                        ; --            ; --                   ; --         ;
 ; MISC_FILE                           ; system/synthesis/../system.cmp                           ; --            ; --                   ; --         ;
@@ -97,7 +97,7 @@ refer to the applicable agreement for further details.
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                             ; --            ; --                   ; --         ;
 ; SLD_FILE                            ; system/synthesis/system.regmap                           ; --            ; --                   ; --         ;
 ; SLD_FILE                            ; system/synthesis/system.debuginfo                        ; --            ; --                   ; --         ;
-; SLD_INFO                            ; QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1776959034 ; --            ; system               ; --         ;
+; SLD_INFO                            ; QSYS_NAME system HAS_SOPCINFO 1 GENERATION_ID 1778398550 ; --            ; system               ; --         ;
 ; SOPCINFO_FILE                       ; system/synthesis/../../system.sopcinfo                   ; --            ; --                   ; --         ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                       ; --            ; --                   ; --         ;
 +-------------------------------------+----------------------------------------------------------+---------------+----------------------+------------+
@@ -108,11 +108,11 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:32     ; 1.0                     ; 4989 MB             ; 00:00:48                           ;
-; Fitter               ; 00:00:55     ; 1.2                     ; 6942 MB             ; 00:02:29                           ;
-; Assembler            ; 00:00:07     ; 1.0                     ; 4872 MB             ; 00:00:08                           ;
-; Timing Analyzer      ; 00:00:09     ; 1.8                     ; 5238 MB             ; 00:00:15                           ;
-; Total                ; 00:01:43     ; --                      ; --                  ; 00:03:40                           ;
+; Analysis & Synthesis ; 00:00:32     ; 1.0                     ; 4988 MB             ; 00:00:50                           ;
+; Fitter               ; 00:00:55     ; 1.2                     ; 6948 MB             ; 00:02:37                           ;
+; Assembler            ; 00:00:07     ; 1.0                     ; 4873 MB             ; 00:00:07                           ;
+; Timing Analyzer      ; 00:00:09     ; 1.9                     ; 5237 MB             ; 00:00:14                           ;
+; Total                ; 00:01:43     ; --                      ; --                  ; 00:03:48                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

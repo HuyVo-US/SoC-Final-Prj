@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu Apr 23 22:19:05 2026
+Analysis & Synthesis Status : Successful - Sun May 10 14:23:09 2026
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Prj1
 Top-level Entity Name : Prj1
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 1025
+Total registers : 1038
 Total pins : 54
 Total virtual pins : 0
 Total block memory bits : 273,408

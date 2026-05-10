@@ -8805,8 +8805,8 @@ readdata[31] <= readdata[31]~reg0.DB_MAX_OUTPUT_PORT_TYPE
 
 |Prj1|system:NIOS_system|system_mm_interconnect_0:mm_interconnect_0
 clock_clk_clk => clock_clk_clk.IN80
-hex0_reset_reset_bridge_in_reset_reset => hex0_reset_reset_bridge_in_reset_reset.IN49
-nios2_gen2_0_reset_reset_bridge_in_reset_reset => nios2_gen2_0_reset_reset_bridge_in_reset_reset.IN31
+nios2_gen2_0_reset_reset_bridge_in_reset_reset => nios2_gen2_0_reset_reset_bridge_in_reset_reset.IN24
+onchip_memory2_0_reset1_reset_bridge_in_reset_reset => onchip_memory2_0_reset1_reset_bridge_in_reset_reset.IN56
 nios2_gen2_0_data_master_address[0] => nios2_gen2_0_data_master_address[0].IN1
 nios2_gen2_0_data_master_address[1] => nios2_gen2_0_data_master_address[1].IN1
 nios2_gen2_0_data_master_address[2] => nios2_gen2_0_data_master_address[2].IN1
@@ -44658,8 +44658,8 @@ reset_req_in13 => ~NO_FANOUT~
 reset_req_in14 => ~NO_FANOUT~
 reset_req_in15 => ~NO_FANOUT~
 clk => clk.IN2
-reset_out <= altera_reset_synchronizer:alt_rst_sync_uq1.reset_out
-reset_req <= altera_reset_synchronizer:alt_rst_req_sync_uq1.reset_out
+reset_out <= r_sync_rst.DB_MAX_OUTPUT_PORT_TYPE
+reset_req <= r_early_rst.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |Prj1|system:NIOS_system|altera_reset_controller:rst_controller|altera_reset_synchronizer:alt_rst_sync_uq1

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="system" kind="system" version="1.0" fabric="QSYS">
  <!-- Format version 18.1 625 (Future versions may contain additional information.) -->
- <!-- 2026.04.23.22:43:54 -->
+ <!-- 2026.05.10.14:35:51 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1776959034</value>
+  <value>1778398550</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -1147,7 +1147,7 @@ parameters are a RESULT of the module parameters. -->
    </port>
   </interface>
  </module>
- <module name="clock" kind="clock_source" version="18.1" path="clock">
+ <module name="clk_0" kind="clock_source" version="18.1" path="clk_0">
   <!-- Describes a single module. Module parameters are
 the requested settings for a module instance. -->
   <parameter name="clockFrequency">
@@ -4513,19 +4513,19 @@ parameters are a RESULT of the module parameters. -->
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
-    <moduleName>Switches_0</moduleName>
-    <slaveName>avalon_slave_0</slaveName>
-    <name>Switches_0.avalon_slave_0</name>
-    <baseAddress>69664</baseAddress>
-    <span>4</span>
-   </memoryBlock>
-   <memoryBlock>
-    <isBridge>false</isBridge>
     <moduleName>Hexs_0</moduleName>
     <slaveName>avalon_slave_0</slaveName>
     <name>Hexs_0.avalon_slave_0</name>
     <baseAddress>69632</baseAddress>
     <span>16</span>
+   </memoryBlock>
+   <memoryBlock>
+    <isBridge>false</isBridge>
+    <moduleName>Switches_0</moduleName>
+    <slaveName>avalon_slave_0</slaveName>
+    <name>Switches_0.avalon_slave_0</name>
+    <baseAddress>69664</baseAddress>
+    <span>4</span>
    </memoryBlock>
    <memoryBlock>
     <isBridge>false</isBridge>
@@ -6376,57 +6376,6 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>avalon_jtag_slave</endConnectionPoint>
  </connection>
  <connection
-   name="nios2_gen2_0.data_master/Switches_0.avalon_slave_0"
-   kind="avalon"
-   version="18.1"
-   start="nios2_gen2_0.data_master"
-   end="Switches_0.avalon_slave_0">
-  <parameter name="arbitrationPriority">
-   <type>int</type>
-   <value>1</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="baseAddress">
-   <type>java.math.BigInteger</type>
-   <value>0x00011020</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="defaultConnection">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="deviceFamily">
-   <type>java.lang.String</type>
-   <value>UNKNOWN</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <parameter name="generateLegacySim">
-   <type>boolean</type>
-   <value>false</value>
-   <derived>false</derived>
-   <enabled>true</enabled>
-   <visible>true</visible>
-   <valid>true</valid>
-  </parameter>
-  <startModule>nios2_gen2_0</startModule>
-  <startConnectionPoint>data_master</startConnectionPoint>
-  <endModule>Switches_0</endModule>
-  <endConnectionPoint>avalon_slave_0</endConnectionPoint>
- </connection>
- <connection
    name="nios2_gen2_0.data_master/Hexs_0.avalon_slave_0"
    kind="avalon"
    version="18.1"
@@ -6475,6 +6424,57 @@ parameters are a RESULT of the module parameters. -->
   <startModule>nios2_gen2_0</startModule>
   <startConnectionPoint>data_master</startConnectionPoint>
   <endModule>Hexs_0</endModule>
+  <endConnectionPoint>avalon_slave_0</endConnectionPoint>
+ </connection>
+ <connection
+   name="nios2_gen2_0.data_master/Switches_0.avalon_slave_0"
+   kind="avalon"
+   version="18.1"
+   start="nios2_gen2_0.data_master"
+   end="Switches_0.avalon_slave_0">
+  <parameter name="arbitrationPriority">
+   <type>int</type>
+   <value>1</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="baseAddress">
+   <type>java.math.BigInteger</type>
+   <value>0x00011020</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="defaultConnection">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="deviceFamily">
+   <type>java.lang.String</type>
+   <value>UNKNOWN</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <parameter name="generateLegacySim">
+   <type>boolean</type>
+   <value>false</value>
+   <derived>false</derived>
+   <enabled>true</enabled>
+   <visible>true</visible>
+   <valid>true</valid>
+  </parameter>
+  <startModule>nios2_gen2_0</startModule>
+  <startConnectionPoint>data_master</startConnectionPoint>
+  <endModule>Switches_0</endModule>
   <endConnectionPoint>avalon_slave_0</endConnectionPoint>
  </connection>
  <connection
@@ -6733,10 +6733,10 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>s1</endConnectionPoint>
  </connection>
  <connection
-   name="clock.clk/nios2_gen2_0.clk"
+   name="clk_0.clk/nios2_gen2_0.clk"
    kind="clock"
    version="18.1"
-   start="clock.clk"
+   start="clk_0.clk"
    end="nios2_gen2_0.clk">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
@@ -6754,16 +6754,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>clock</startModule>
+  <startModule>clk_0</startModule>
   <startConnectionPoint>clk</startConnectionPoint>
   <endModule>nios2_gen2_0</endModule>
   <endConnectionPoint>clk</endConnectionPoint>
  </connection>
  <connection
-   name="clock.clk/jtag_uart_0.clk"
+   name="clk_0.clk/jtag_uart_0.clk"
    kind="clock"
    version="18.1"
-   start="clock.clk"
+   start="clk_0.clk"
    end="jtag_uart_0.clk">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
@@ -6781,16 +6781,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>clock</startModule>
+  <startModule>clk_0</startModule>
   <startConnectionPoint>clk</startConnectionPoint>
   <endModule>jtag_uart_0</endModule>
   <endConnectionPoint>clk</endConnectionPoint>
  </connection>
  <connection
-   name="clock.clk/onchip_memory2_0.clk1"
+   name="clk_0.clk/onchip_memory2_0.clk1"
    kind="clock"
    version="18.1"
-   start="clock.clk"
+   start="clk_0.clk"
    end="onchip_memory2_0.clk1">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
@@ -6808,16 +6808,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>clock</startModule>
+  <startModule>clk_0</startModule>
   <startConnectionPoint>clk</startConnectionPoint>
   <endModule>onchip_memory2_0</endModule>
   <endConnectionPoint>clk1</endConnectionPoint>
  </connection>
  <connection
-   name="clock.clk/Switches_0.clock_sink"
+   name="clk_0.clk/Switches_0.clock_sink"
    kind="clock"
    version="18.1"
-   start="clock.clk"
+   start="clk_0.clk"
    end="Switches_0.clock_sink">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
@@ -6835,16 +6835,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>clock</startModule>
+  <startModule>clk_0</startModule>
   <startConnectionPoint>clk</startConnectionPoint>
   <endModule>Switches_0</endModule>
   <endConnectionPoint>clock_sink</endConnectionPoint>
  </connection>
  <connection
-   name="clock.clk/Hexs_0.clock_sink"
+   name="clk_0.clk/Hexs_0.clock_sink"
    kind="clock"
    version="18.1"
-   start="clock.clk"
+   start="clk_0.clk"
    end="Hexs_0.clock_sink">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
@@ -6862,7 +6862,7 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>clock</startModule>
+  <startModule>clk_0</startModule>
   <startConnectionPoint>clk</startConnectionPoint>
   <endModule>Hexs_0</endModule>
   <endConnectionPoint>clock_sink</endConnectionPoint>
@@ -6903,10 +6903,10 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>irq</endConnectionPoint>
  </connection>
  <connection
-   name="clock.clk_reset/nios2_gen2_0.reset"
+   name="clk_0.clk_reset/nios2_gen2_0.reset"
    kind="reset"
    version="18.1"
-   start="clock.clk_reset"
+   start="clk_0.clk_reset"
    end="nios2_gen2_0.reset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
@@ -6924,16 +6924,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>clock</startModule>
+  <startModule>clk_0</startModule>
   <startConnectionPoint>clk_reset</startConnectionPoint>
   <endModule>nios2_gen2_0</endModule>
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
-   name="clock.clk_reset/jtag_uart_0.reset"
+   name="clk_0.clk_reset/jtag_uart_0.reset"
    kind="reset"
    version="18.1"
-   start="clock.clk_reset"
+   start="clk_0.clk_reset"
    end="jtag_uart_0.reset">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
@@ -6951,16 +6951,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>clock</startModule>
+  <startModule>clk_0</startModule>
   <startConnectionPoint>clk_reset</startConnectionPoint>
   <endModule>jtag_uart_0</endModule>
   <endConnectionPoint>reset</endConnectionPoint>
  </connection>
  <connection
-   name="clock.clk_reset/onchip_memory2_0.reset1"
+   name="clk_0.clk_reset/onchip_memory2_0.reset1"
    kind="reset"
    version="18.1"
-   start="clock.clk_reset"
+   start="clk_0.clk_reset"
    end="onchip_memory2_0.reset1">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
@@ -6978,16 +6978,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>clock</startModule>
+  <startModule>clk_0</startModule>
   <startConnectionPoint>clk_reset</startConnectionPoint>
   <endModule>onchip_memory2_0</endModule>
   <endConnectionPoint>reset1</endConnectionPoint>
  </connection>
  <connection
-   name="clock.clk_reset/Switches_0.reset_sink"
+   name="clk_0.clk_reset/Switches_0.reset_sink"
    kind="reset"
    version="18.1"
-   start="clock.clk_reset"
+   start="clk_0.clk_reset"
    end="Switches_0.reset_sink">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
@@ -7005,16 +7005,16 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>clock</startModule>
+  <startModule>clk_0</startModule>
   <startConnectionPoint>clk_reset</startConnectionPoint>
   <endModule>Switches_0</endModule>
   <endConnectionPoint>reset_sink</endConnectionPoint>
  </connection>
  <connection
-   name="clock.clk_reset/Hexs_0.reset_sink"
+   name="clk_0.clk_reset/Hexs_0.reset_sink"
    kind="reset"
    version="18.1"
-   start="clock.clk_reset"
+   start="clk_0.clk_reset"
    end="Hexs_0.reset_sink">
   <parameter name="deviceFamily">
    <type>java.lang.String</type>
@@ -7032,7 +7032,7 @@ parameters are a RESULT of the module parameters. -->
    <visible>true</visible>
    <valid>true</valid>
   </parameter>
-  <startModule>clock</startModule>
+  <startModule>clk_0</startModule>
   <startConnectionPoint>clk_reset</startConnectionPoint>
   <endModule>Hexs_0</endModule>
   <endConnectionPoint>reset_sink</endConnectionPoint>

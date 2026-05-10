@@ -41,7 +41,7 @@
          type = "String";
       }
    }
-   element clock
+   element clk_0
    {
       datum _sortIndex
       {
@@ -126,13 +126,13 @@
  <parameter name="timeStamp" value="0" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
- <interface name="clk" internal="clock.clk_in" type="clock" dir="end" />
+ <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
  <interface
    name="hexs_0_conduit_end"
    internal="Hexs_0.conduit_end"
    type="conduit"
    dir="end" />
- <interface name="reset" internal="clock.clk_in_reset" type="reset" dir="end" />
+ <interface name="reset" internal="clk_0.clk_in_reset" type="reset" dir="end" />
  <interface
    name="switches_0_conduit_end"
    internal="Switches_0.conduit_end"
@@ -140,7 +140,7 @@
    dir="end" />
  <module name="Hexs_0" kind="Hexs" version="1.0" enabled="1" />
  <module name="Switches_0" kind="Switches" version="1.0" enabled="1" />
- <module name="clock" kind="clock_source" version="18.1" enabled="1">
+ <module name="clk_0" kind="clock_source" version="18.1" enabled="1">
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="clockFrequencyKnown" value="true" />
   <parameter name="inputClockFrequency" value="0" />
@@ -392,18 +392,18 @@
    kind="avalon"
    version="18.1"
    start="nios2_gen2_0.data_master"
-   end="Switches_0.avalon_slave_0">
+   end="Hexs_0.avalon_slave_0">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011020" />
+  <parameter name="baseAddress" value="0x00011000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
    kind="avalon"
    version="18.1"
    start="nios2_gen2_0.data_master"
-   end="Hexs_0.avalon_slave_0">
+   end="Switches_0.avalon_slave_0">
   <parameter name="arbitrationPriority" value="1" />
-  <parameter name="baseAddress" value="0x00011000" />
+  <parameter name="baseAddress" value="0x00011020" />
   <parameter name="defaultConnection" value="false" />
  </connection>
  <connection
@@ -451,19 +451,19 @@
   <parameter name="baseAddress" value="0x8000" />
   <parameter name="defaultConnection" value="false" />
  </connection>
- <connection kind="clock" version="18.1" start="clock.clk" end="nios2_gen2_0.clk" />
- <connection kind="clock" version="18.1" start="clock.clk" end="jtag_uart_0.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="nios2_gen2_0.clk" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="jtag_uart_0.clk" />
  <connection
    kind="clock"
    version="18.1"
-   start="clock.clk"
+   start="clk_0.clk"
    end="onchip_memory2_0.clk1" />
  <connection
    kind="clock"
    version="18.1"
-   start="clock.clk"
+   start="clk_0.clk"
    end="Switches_0.clock_sink" />
- <connection kind="clock" version="18.1" start="clock.clk" end="Hexs_0.clock_sink" />
+ <connection kind="clock" version="18.1" start="clk_0.clk" end="Hexs_0.clock_sink" />
  <connection
    kind="interrupt"
    version="18.1"
@@ -474,27 +474,27 @@
  <connection
    kind="reset"
    version="18.1"
-   start="clock.clk_reset"
+   start="clk_0.clk_reset"
    end="nios2_gen2_0.reset" />
  <connection
    kind="reset"
    version="18.1"
-   start="clock.clk_reset"
+   start="clk_0.clk_reset"
    end="jtag_uart_0.reset" />
  <connection
    kind="reset"
    version="18.1"
-   start="clock.clk_reset"
+   start="clk_0.clk_reset"
    end="onchip_memory2_0.reset1" />
  <connection
    kind="reset"
    version="18.1"
-   start="clock.clk_reset"
+   start="clk_0.clk_reset"
    end="Switches_0.reset_sink" />
  <connection
    kind="reset"
    version="18.1"
-   start="clock.clk_reset"
+   start="clk_0.clk_reset"
    end="Hexs_0.reset_sink" />
  <connection
    kind="reset"
