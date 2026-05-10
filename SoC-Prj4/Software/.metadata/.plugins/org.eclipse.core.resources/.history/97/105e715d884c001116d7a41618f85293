@@ -1,0 +1,112 @@
+#include <stdio.h>
+#include "system.h"
+#include "altera_avalon_dma_regs.h"
+#include "io.h"
+
+char *pdata0 = (char *)ONCHIP_MEMORY2_0_BASE;
+
+char *pdata1 = (char *)ONCHIP_MEMORY2_1_BASE;
+
+void DMA_Start(void)
+{
+    /* Disable DMA */
+    IOWR_ALTERA_AVALON_DMA_CONTROL(DMA_0_BASE, 0);
+
+    /* Clear old DMA status */
+    IOWR_ALTERA_AVALON_DMA_STATUS(DMA_0_BASE, 0);
+
+    /* Source address */
+    IOWR_ALTERA_AVALON_DMA_RADDRESS
+    (
+        DMA_0_BASE,
+        (int)pdata0
+    );
+
+    /* Destination address */
+    IOWR_ALTERA_AVALON_DMA_WADDRESS
+    (
+        DMA_0_BASE,
+        (int)pdata1
+    );
+
+    /* Transfer length = 32 bytes */
+    IOWR_ALTERA_AVALON_DMA_LENGTH
+    (
+        DMA_0_BASE,
+        32
+    );
+
+    /* Start DMA */
+    IOWR_ALTERA_AVALON_DMA_CONTROL
+    (
+        DMA_0_BASE,
+
+        ALTERA_AVALON_DMA_CONTROL_BYTE_MSK |
+        ALTERA_AVALON_DMA_CONTROL_LEEN_MSK |
+        ALTERA_AVALON_DMA_CONTROL_GO_MSK
+    );
+}
+
+/*------------------------------------------------------------------
+ * MAIN
+ *-----------------------------------------------------------------*/
+int main()
+{
+    int i;
+
+    printf("=========== DMA TEST BEGIN ===========\n");
+
+    /*--------------------------------------------------------------
+     * Initialize source memory
+     *-------------------------------------------------------------*/
+    for(i = 0; i < 32; i++)
+    {
+        pdata0[i] = i;
+    }
+
+    /*--------------------------------------------------------------
+     * Clear destination memory
+     *-------------------------------------------------------------*/
+    for(i = 0; i < 32; i++)
+    {
+        pdata1[i] = 0;
+    }
+
+    /*--------------------------------------------------------------
+     * Print addresses
+     *-------------------------------------------------------------*/
+    printf("pdata0 address = 0x%08x\n", (unsigned int)pdata0);
+    printf("pdata1 address = 0x%08x\n", (unsigned int)pdata1);
+
+    /*--------------------------------------------------------------
+     * Start DMA
+     *-------------------------------------------------------------*/
+    printf("Starting DMA...\n");
+
+    DMA_Start();
+
+    /*--------------------------------------------------------------
+     * Polling DMA DONE bit
+     *-------------------------------------------------------------*/
+    while
+    (
+        !(IORD_ALTERA_AVALON_DMA_STATUS(DMA_0_BASE) &
+          ALTERA_AVALON_DMA_STATUS_DONE_MSK)
+    );
+
+    printf("DMA Transfer Complete\n");
+
+    /*--------------------------------------------------------------
+     * Print destination memory
+     *-------------------------------------------------------------*/
+    for(i = 0; i < 32; i++)
+    {
+        printf("byte %d = %d\n", i, pdata1[i]);
+    }
+
+    printf("============ DMA TEST END ============\n");
+
+    while(1);
+
+    return 0;
+}

@@ -1,5 +1,5 @@
-module Prj4(
-	input			CLOCK__50,
+module Prj4 (
+	input			CLOCK_50,
 	input	[0:0]	KEY
 );
 

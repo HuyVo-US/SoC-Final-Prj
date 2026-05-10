@@ -57,6 +57,10 @@ int main() {
         mode = (sw >> 8) & 0x3;
         chuc = (sw >> 4) & 0xF;
         dv   = sw & 0xF;
+        if (chuc > 9)
+            chuc = 9;
+        if (dv > 9)
+            dv = 9;
         data = (chuc * 10) + dv;
 
         if (mode != 3) {

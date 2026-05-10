@@ -17,14 +17,6 @@
          type = "int";
       }
    }
-   element clk_0.clk
-   {
-      datum _tags
-      {
-         value = "";
-         type = "String";
-      }
-   }
    element dma_0
    {
       datum _sortIndex
@@ -65,14 +57,6 @@
          type = "int";
       }
    }
-   element nios2_gen2_0.data_master
-   {
-      datum _tags
-      {
-         value = "";
-         type = "String";
-      }
-   }
    element nios2_gen2_0.debug_mem_slave
    {
       datum baseAddress
@@ -103,14 +87,6 @@
       {
          value = "5";
          type = "int";
-      }
-   }
-   element onchip_memory2_1.clk1
-   {
-      datum _tags
-      {
-         value = "";
-         type = "String";
       }
    }
    element onchip_memory2_1.s1

@@ -1,21 +1,15 @@
-/*
- * source.c
- *
- *  Created on: 10-05-2026
- *      Author: Admin
- */
 #include <stdio.h>
 #include "system.h"
 #include "altera_avalon_dma_regs.h"
 #include "sys/alt_irq.h"
 //pdata0 points to a global array stored in onchip_memory2_0
-char pdata0[32] = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,
-					16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31 };
+char *pdata0 = (char*) (ONCHIP_MEMORY2_0_BASE);
 //pdata1 points to onchip_memory2_1
 char *pdata1 = (char*) (ONCHIP_MEMORY2_1_BASE);
 //Interrupt handler of DMA
 void DMA_ISR_Handler(void* isr_context) {
 	int i;
+	printf("\nDMA Transfer Complete\n");
 	// Read and print data in onchip_memory2_1
 	for (i = 0; i < 32; i++) {
 		printf("byte %d = %d\n", i, pdata1[i]);
@@ -41,14 +35,14 @@ void DMA_Init(void) {
 			ALTERA_AVALON_DMA_CONTROL_GO_MSK);
 }
 void main() {
-	DMA_Init();
+	int i;
+	for(i = 0; i < 32; i++){
+		pdata0[i] = i;
+	}
 	alt_ic_isr_register(0, DMA_0_IRQ, DMA_ISR_Handler, (void*) 0, (void*) 0);
+	DMA_Init();
+
+	while (!(IORD_ALTERA_AVALON_DMA_STATUS(DMA_0_BASE) & ALTERA_AVALON_DMA_STATUS_DONE_MSK));
+	printf("DMA DONE\n");
 	while (1);
 }
-
-
-
-
-
-
-

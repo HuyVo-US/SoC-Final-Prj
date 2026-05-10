@@ -1,16 +1,16 @@
-Fitter Status : Successful - Sun May 10 13:02:12 2026
+Fitter Status : Successful - Sun May 10 23:20:52 2026
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Prj4
 Top-level Entity Name : Prj4
 Family : Cyclone V
 Device : 5CSXFC6D6F31C6
 Timing Models : Final
-Logic utilization (in ALMs) : 98 / 41,910 ( < 1 % )
-Total registers : 165
+Logic utilization (in ALMs) : 988 / 41,910 ( 2 % )
+Total registers : 1187
 Total pins : 2 / 499 ( < 1 % )
 Total virtual pins : 0
-Total block memory bits : 16 / 5,662,720 ( < 1 % )
-Total RAM Blocks : 1 / 553 ( < 1 % )
+Total block memory bits : 536,576 / 5,662,720 ( 9 % )
+Total RAM Blocks : 70 / 553 ( 13 % )
 Total DSP Blocks : 0 / 112 ( 0 % )
 Total HSSI RX PCSs : 0 / 9 ( 0 % )
 Total HSSI PMA RX Deserializers : 0 / 9 ( 0 % )

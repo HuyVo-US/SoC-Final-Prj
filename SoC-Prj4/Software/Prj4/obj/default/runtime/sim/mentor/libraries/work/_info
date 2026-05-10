@@ -1,0 +1,30 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Quartus/SoC-Prj4/Software/Prj4/obj/default/runtime/sim/mentor
+vsystem_tb
+!s110 1778429286
+!i10b 1
+!s100 6RGPP5GQaYd_?zJX0>[J_2
+I9<UPl4Fn?H?ad3V<6_J=>1
+VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1778428579
+8D:/Quartus/SoC-Prj4/system/testbench/system_tb/simulation/system_tb.v
+FD:/Quartus/SoC-Prj4/system/testbench/system_tb/simulation/system_tb.v
+L0 6
+OV;L;10.5b;63
+r1
+!s85 0
+31
+!s108 1778429286.000000
+!s107 D:/Quartus/SoC-Prj4/system/testbench/system_tb/simulation/system_tb.v|
+!s90 -reportprogress|300|D:/Quartus/SoC-Prj4/system/testbench/system_tb/simulation/system_tb.v|
+!i113 1
+tCvgOpt 0

@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>May 10, 2026 1:05:51 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1778393151396</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>May 10, 2026 11:22:24 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1778430144865</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>D:\Quartus\SoC-Prj4\software\Prj4_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>..\..\system.sopcinfo</SopcDesignFile>

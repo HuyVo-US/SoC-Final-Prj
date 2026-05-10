@@ -1,0 +1,157 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dD:/Quartus/SoC-Prj4/Software/Prj4/obj/default/runtime/sim/mentor
+vsystem_dma_0
+Z1 !s110 1778429285
+!i10b 1
+!s100 md^Ti?Fnzam;_b_iK37:P2
+Ihhd@Pnk?@[Ff958d6OF@R3
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+Z3 w1778428586
+Z4 8D:/Quartus/SoC-Prj4/system/testbench/system_tb/simulation/submodules/system_dma_0.v
+Z5 FD:/Quartus/SoC-Prj4/system/testbench/system_tb/simulation/submodules/system_dma_0.v
+L0 555
+Z6 OV;L;10.5b;63
+r1
+!s85 0
+31
+Z7 !s108 1778429285.000000
+Z8 !s107 D:/Quartus/SoC-Prj4/system/testbench/system_tb/simulation/submodules/system_dma_0.v|
+Z9 !s90 -reportprogress|300|D:/Quartus/SoC-Prj4/system/testbench/system_tb/simulation/submodules/system_dma_0.v|-work|dma_0|
+!i113 1
+Z10 o-work dma_0
+Z11 tCvgOpt 0
+vsystem_dma_0_byteenables
+R1
+!i10b 1
+!s100 IKElO?DQ9LRkAKL=`QXM]0
+I<Waah]mf<VcQ3TUUNW=Dm2
+R2
+R0
+R3
+R4
+R5
+L0 106
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vsystem_dma_0_fifo_module
+R1
+!i10b 1
+!s100 Xaa[;b8?_iZdmaIn;X<k:0
+INBh>JNSiYRI`cfII^BQXE3
+R2
+R0
+R3
+R4
+R5
+L0 253
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vsystem_dma_0_fifo_module_fifo_ram_module
+R1
+!i10b 1
+!s100 IN_CTZ^ck9?WBM6I5TolR3
+Ig5he=;JmzhP1LM^EnYAg>0
+R2
+R0
+R3
+R4
+R5
+L0 154
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vsystem_dma_0_mem_read
+R1
+!i10b 1
+!s100 CWWG`@QP6TB<:]IJ@SGa`0
+I:19_<LlW<SEkjQAae?6Ki1
+R2
+R0
+R3
+R4
+R5
+L0 417
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vsystem_dma_0_mem_write
+R1
+!i10b 1
+!s100 D^7H77W9Hg[jYBU1n7;VU3
+IVhKCf7EAAHh81M9Sn3V[N0
+R2
+R0
+R3
+R4
+R5
+L0 505
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
+vsystem_dma_0_read_data_mux
+R1
+!i10b 1
+!s100 _lFHMAV8<9gH:XFRIJFV`0
+I@=8QT[a7E@3dOOPOcnC?`3
+R2
+R0
+R3
+R4
+R5
+L0 21
+R6
+r1
+!s85 0
+31
+R7
+R8
+R9
+!i113 1
+R10
+R11
